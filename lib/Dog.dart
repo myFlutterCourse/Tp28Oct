@@ -1,3 +1,5 @@
+import 'package:tp_28oct/Owner.dart';
+
 class Dog {
   int id;
   String name;
@@ -8,8 +10,9 @@ class Dog {
   String location;
   String image;
   String about;
-  
-  //constructor
-  Dog(this.id, this.name, this.age, this.gender, this.color, this.weight, this.location, this.image, this.about);
+  Owner owner;
 
+  //constructor
+  Dog(this.id, this.name, this.age, this.gender, this.color, this.weight,
+      this.location, this.image, this.about,this.owner);
 }
