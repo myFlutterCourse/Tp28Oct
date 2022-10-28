@@ -108,18 +108,19 @@ Widget card(Dog dog) {
                                             color: Colors.black87,
                                             fontWeight: FontWeight.bold)),
                                     Container(
-                                      padding: const EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                        color:
-                                            Color.fromARGB(255, 211, 208, 208),
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                      child: Text(dog.gender,
-                                          style: TextStyle(
-                                              color: dog.gender == "Male"
-                                                  ? Colors.blue
-                                                  : Colors.pink)),
-                                    ),
+                            padding: const EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              color: dog.gender == "Male"
+                                  ? Color.fromARGB(255, 207, 231, 238)
+                                  : Color.fromARGB(255, 255, 192, 203),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Text(dog.gender,
+                                style: TextStyle(
+                                    color: dog.gender == "Male"
+                                        ? Colors.blue
+                                        : Colors.pink)),
+                          ),
                                   ],
                                 ),
                                 Row(
@@ -168,9 +169,8 @@ class MyDogPage extends StatelessWidget {
     Dog dog = dogList.firstWhere((dog) => dog.id == dogId);
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        leading: InkWell(
-          onTap: () async {
+        leading: GestureDetector(
+          onTap: () {
             Navigator.pop(context);
           },
           child: Icon(
@@ -232,7 +232,7 @@ class MyDogPage extends StatelessWidget {
                             padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
                               color: dog.gender == "Male"
-                                  ? Color.fromARGB(255, 143, 192, 207)
+                                  ? Color.fromARGB(255, 207, 231, 238)
                                   : Color.fromARGB(255, 255, 192, 203),
                               borderRadius: BorderRadius.circular(15),
                             ),
