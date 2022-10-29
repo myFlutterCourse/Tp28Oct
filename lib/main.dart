@@ -87,10 +87,12 @@ Widget card(Dog dog) {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     ClipRRect(
-                      child: Image(
+                      child: Hero(
+                        tag: dog.id,
+                        child:Image(
                           image: AssetImage(dog.image),
                           width: 100,
-                          height: 100),
+                          height: 100)),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     Expanded(

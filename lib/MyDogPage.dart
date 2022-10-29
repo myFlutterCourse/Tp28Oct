@@ -44,7 +44,7 @@ class MyDogPage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(16, 16, 16, 16),
                     child: Hero(
-                      tag: 'mainImage',
+                      tag: dog.id,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(12),
                         child: Image(
